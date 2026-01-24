@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WAVEKEY Product Page Themed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#28221E",
+                        "brand-gold": "#8D7B68",
+                        "page-bg": "#CECBC8",
+                        "nav-bg": "#28221E",
+                    },
+                    fontFamily: {
+                        "sans": ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "sans-serif"],
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    lineHeight: {
+                        "relaxed": "1.75",
+                        "loose": "2"
+                    },
+                    letterSpacing: {
+                        "tight": "-0.02em",
+                        "normal": "0em",
+                        "wide": "0.02em"
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background-color: #CECBC8;
+            line-height: 1.6;
+            letter-spacing: 0;
+        }
+        
+        /* Headings - Space Grotesk with tight spacing and strong weight */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Body text - System font with generous line height */
+        p, span, a {
+            font-family: inherit;
+            line-height: 1.75;
+            letter-spacing: 0;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Navigation & UI labels - System font, medium weight */
+        nav, button, label {
+            font-family: inherit;
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+        }
+        
+        /* Product names - Space Grotesk */
+        .product-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Apple-style typography system - comprehensive coverage */
+        
+        /* Hero section text */
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Section headings */
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+        
+        /* Subheadings */
+        .subheading {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        /* Feature cards */
+        .feature-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            font-size: 1.0625rem;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-card p {
+            font-family: inherit;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            letter-spacing: 0;
+            color: inherit;
+        }
+        
+        /* Body copy - maximum readability */
+        .body-copy {
+            font-family: inherit;
+            font-size: 1rem;
+            line-height: 1.75;
+            letter-spacing: 0.005em;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Small text and captions */
+        .caption {
+            font-family: inherit;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            letter-spacing: 0;
+            color: inherit;
+            opacity: 0.8;
+        }
+        
+        /* Call-to-action text */
+        .cta-text {
+            font-family: inherit;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            line-height: 1.5;
+        }
+        
+        /* Labels and navigation */
+        .label {
+            font-family: inherit;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            line-height: 1.5;
+        }
+        
+        /* Testimonial text */
+        .testimonial {
+            font-family: inherit;
+            font-size: 1.0625rem;
+            font-style: italic;
+            line-height: 1.8;
+            letter-spacing: 0;
+        }
+        
+        /* Footer text */
+        .footer-text {
+            font-family: inherit;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            letter-spacing: 0;
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-[#28221E] transition-colors duration-300">
+<!-- Announcement Bar -->
+<div style="background-color: #CECBC8; color: #28221E;" class="text-[11px] font-medium tracking-widest py-3 uppercase text-center relative z-50 fixed w-full transition-all duration-300" id="announcement-bar">
+  <p style="margin: 0; text-align: center;">Free worldwide shipping on orders over $75</p>
+</div>
+
+<!-- Navigation -->
+<header class="fixed w-full z-40 transition-all duration-300" id="navbar" style="background-color: #28221E;">
+  <div class="absolute inset-0 glass opacity-0 transition-opacity duration-300" id="nav-bg"></div>
+
+  <nav class="max-w-7xl mx-auto px-6 lg:px-12 py-5 relative flex items-center justify-between">
+    
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2 group">
+      <div class="h-8 w-8 rounded-lg flex items-center justify-center font-bold text-sm transition-colors" style="background-color: #CECBC8; color: #28221E;">
+        D
+      </div>
+      <span class="font-bold text-lg tracking-tight transition-colors" style="color: #CECBC8;">De.ESSENTIELS</span>
+    </a>
+    
+    <!-- Navigation Links -->
+    <div class="hidden md:flex items-center gap-10 text-sm font-medium transition-colors" style="color: #CECBC8;">
+      <a href="#overview" class="hover:opacity-80 transition-opacity">Overview</a>
+      <a href="#specs" class="hover:opacity-80 transition-opacity">Tech Specs</a>
+      <a href="#reviews" class="hover:opacity-80 transition-opacity">Reviews</a>
+      <a href="#faq" class="hover:opacity-80 transition-opacity">Support</a>
+    </div>
+
+    <!-- CTA Button -->
+    <button class="px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg transform hover:-translate-y-0.5" style="background-color: #CECBC8; color: #28221E;">
+      Buy Now
+    </button>
+
+  </nav>
+</header>
+<!-- Hero Section -->
+<section id="overview" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-bg">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-16 items-center">
+    
+    <!-- Text Content -->
+    <div class="lg:col-span-5 relative z-10 animate-fade-in">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/60 border border-[#28221E]/10 backdrop-blur-md mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#28221E] animate-pulse"></span>
+        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#28221E]/70">New Arrival</span>
+      </div>
+      
+      <h1 class="text-6xl lg:text-7xl font-bold tracking-tighter leading-[0.95] mb-6 text-[#28221E]">
+        WAVEKEY.
+        <span class="block text-3xl lg:text-4xl font-medium tracking-normal mt-2 text-[#28221E]/60">Impossible to lose.</span>
+      </h1>
+      
+      <p class="text-lg text-[#28221E]/80 leading-relaxed mb-10 max-w-md">
+        The world's thinnest tracker. Works seamlessly with the Apple Find My network to secure your essentials.
+      </p>
+      
+      <div class="flex items-center gap-4 mb-12">
+        <button class="bg-[#28221E] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-black btn-hover shadow-xl shadow-[#28221E]/20">
+          Buy Now $39
+        </button>
+        <button class="text-[#28221E] px-8 py-4 rounded-full text-sm font-semibold border border-[#28221E]/20 hover:bg-white hover:border-transparent transition-all">
+          Learn more
+        </button>
+      </div>
+
+      <div class="grid grid-cols-3 gap-8 border-t border-[#28221E]/10 pt-8">
+        <div>
+          <p class="text-2xl font-bold tracking-tight">1.6mm</p>
+          <p class="text-[10px] uppercase tracking-widest text-[#28221E]/60 font-medium mt-1">Ultra Thin</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold tracking-tight">3 Yrs</p>
+          <p class="text-[10px] uppercase tracking-widest text-[#28221E]/60 font-medium mt-1">Battery</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold tracking-tight">IP67</p>
+          <p class="text-[10px] uppercase tracking-widest text-[#28221E]/60 font-medium mt-1">Waterproof</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Visual -->
+    <div class="lg:col-span-7 relative flex justify-center lg:justify-end">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-white/40 blur-3xl rounded-full pointer-events-none"></div>
+      
+      <!-- Card Container -->
+      <div class="relative w-full max-w-md aspect-[1.586/1] rounded-2xl bg-[#1a1a1a] shadow-2xl shadow-[#28221E]/30 flex items-center justify-center overflow-hidden animate-float ring-1 ring-white/10 group cursor-pointer perspective-1000">
+         <!-- Matte Texture -->
+         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMjgyMjFFIi8+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz4KPC9zdmc+')] opacity-50"></div>
+         
+         <!-- Content on Card -->
+         <div class="absolute top-6 left-8 right-8 flex justify-between items-start">
+           <div class="h-8 w-8 rounded-full border border-white/20 flex items-center justify-center">
+             <div class="h-3 w-3 rounded-full bg-white/90 shadow-[0_0_10px_rgba(255,255,255,0.8)]"></div>
+           </div>
+           <span class="text-white/30 text-[10px] font-bold tracking-[0.2em] uppercase">Find My</span>
+         </div>
+         
+         <div class="text-center z-10">
+           <h3 class="text-white text-3xl font-bold tracking-tight mb-1">WAVEKEY</h3>
+           <p class="text-white/40 text-[10px] uppercase tracking-[0.3em]">Smart Card</p>
+         </div>
+
+         <div class="absolute bottom-6 left-8 text-white/20 text-[10px] tracking-widest">
+           DE.ESSENTIELS
+         </div>
+         
+         <!-- Reflection -->
+         <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-16 px-4 max-w-screen-xl mx-auto">
+<div class="bg-white/40 rounded-3xl border border-black/5 overflow-hidden">
+<div class="flex flex-col md:flex-row items-center">
+<div class="flex-1 p-8 md:p-12 lg:p-16 space-y-6">
+<div>
+<p class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4 opacity-60">Ecosystem</p>
+<h2 class="text-3xl md:text-4xl font-bold text-[#28221E] mb-4">Works with Apple Find My</h2>
+<p class="text-[#4A443F] text-lg leading-relaxed">
+                        Leverage the power of hundreds of millions of devices to find your wallet anywhere in the world. Secure, private, and automatic.
+                    </p>
+</div>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-[#28221E] font-medium">
+<span class="material-symbols-outlined text-[#5B6346]">check_circle</span>
+                        Native integration in Find My app
+                    </li>
+<li class="flex items-center gap-3 text-[#28221E] font-medium">
+<span class="material-symbols-outlined text-[#5B6346]">check_circle</span>
+                        Left-behind alerts on your phone
+                    </li>
+<li class="flex items-center gap-3 text-[#28221E] font-medium">
+<span class="material-symbols-outlined text-[#5B6346]">check_circle</span>
+                        End-to-end encrypted tracking
+                    </li>
+</ul>
+<button class="flex items-center gap-2 bg-nav-bg text-white px-6 py-3 rounded-xl font-bold hover:bg-black transition-all group">
+<span>Learn about integration</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="flex-1 w-full aspect-square md:aspect-auto self-stretch bg-center bg-cover min-h-[400px]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaAPEFC3PtVF5F8P8jiy8NMgJ7Vz5SHxb7Dh8cN9SfON0jCWkw1W-4OLI19z93XTDE0wLTYbgV86H1b2tBbnLExteWYjdj-RjaFIBDaZgQQAb65KK4s3NYNtrc4YRJixYXEtJhgBvPST1ERfcL9IYWIWajI9UtvxMwrxQgR3A8Gip9y4gp0iHDx4rydC6oRZAXEm02OlquN80f3L4miV0QiH0Ja9v4gdTctV9WX6ss2vu9T5x6unrtwVrizzF7f4D396L-Pxh_zgoS");'>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-4 overflow-hidden">
+<div class="max-w-screen-xl mx-auto flex flex-col items-center">
+<div class="text-center max-w-2xl mb-12">
+<h2 class="text-4xl font-black text-[#28221E] mb-6">Designed to disappear.</h2>
+<p class="text-[#4A443F] text-lg">
+                Traditional trackers are bulky and ruin the silhouette of your slim wallet. WAVEKEY is built to fit in a credit card slot without the bulge.
+            </p>
+</div>
+<div class="w-full relative">
+<div class="aspect-[16/9] w-full rounded-3xl overflow-hidden bg-white/20 border border-black/5">
+<img alt="Slim wallet with tracker" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXLYTi8BhczhIxwveiHmIlvpMONo_xH4Q2J6ZfHwS4sWX81--SSzIoOS1ZLmI0A8-Hnyydiws_XE0EIT9d43SuTDUgS_IP-J7K96IW5MwsLUbBYCcXi1JpO4-jnSrfr2geOzmqogpzwT-LAaSrn8qXzeb3jyHUlZFM8kGdgxp-tN3K30B9yPmsGWNSWh8jUEtjw125FYmaTZla4Y7oK5cWw9N4h1PN-CRHNS2iGOIkEAQ9VSxjqObVOaQIY7fLfg4Y2IAfOpFkkz0V"/>
+</div>
+<div class="absolute bottom-8 left-8 bg-[#28221E]/95 backdrop-blur text-white p-6 rounded-2xl border border-white/10 shadow-2xl max-w-xs hidden md:block">
+<p class="text-white font-bold text-lg mb-1">Standard Card Size</p>
+<p class="text-white/70 text-sm">Fits in any standard CC slot, sleeve, or minimalist wallet.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-4 max-w-screen-xl mx-auto">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="relative bg-white/30 rounded-3xl p-12 border border-black/5">
+<div class="aspect-square flex items-center justify-center">
+<span class="material-symbols-outlined text-[120px] text-primary/10 absolute">developer_board</span>
+<div class="relative z-10 w-full h-full border-2 border-dashed border-primary/20 rounded-xl flex flex-col items-center justify-center p-8 bg-white/20">
+<div class="w-full space-y-4">
+<div class="h-2 bg-primary/20 rounded-full w-3/4"></div>
+<div class="h-2 bg-primary/20 rounded-full w-1/2"></div>
+<div class="h-2 bg-primary/20 rounded-full w-5/6"></div>
+<div class="flex gap-4 pt-4">
+<div class="size-12 rounded-full border-2 border-primary/40"></div>
+<div class="flex-1 h-12 rounded-lg bg-primary/10"></div>
+</div>
+</div>
+<p class="mt-8 text-xs font-bold text-primary uppercase tracking-widest opacity-60">W1 Internal Architecture</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-6">
+<p class="text-primary font-bold uppercase tracking-widest text-xs opacity-60">The Engineering</p>
+<h2 class="text-4xl font-bold text-[#28221E]">Technical Schematic</h2>
+<p class="text-[#4A443F] text-lg leading-relaxed">
+                Underneath the sleek 1.6mm exterior lies a marvel of micro-engineering. Our custom W1 chip balances long-range connectivity with extreme power efficiency.
+            </p>
+<div class="space-y-4 pt-4">
+<div class="flex gap-4">
+<span class="text-primary font-bold text-xl">01</span>
+<div>
+<p class="font-bold text-[#28221E]">Reinforced Core</p>
+<p class="text-sm text-[#6D6762]">A stainless steel internal frame prevents bending and protects the battery.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="text-primary font-bold text-xl">02</span>
+<div>
+<p class="font-bold text-[#28221E]">Piezoelectric Speaker</p>
+<p class="text-sm text-[#6D6762]">Ultra-thin acoustic resonance chambers deliver 120dB of clarity.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-black/5 overflow-hidden">
+<div class="max-w-screen-xl mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-[#28221E]">Loved by minimalists</h2>
+</div>
+<div class="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar">
+<div class="min-w-[300px] md:min-w-[400px] bg-white/40 p-8 rounded-3xl border border-black/5 snap-center">
+<div class="flex text-[#8D7B68] mb-4">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-[#4A443F] text-lg italic mb-6">"Finally, a tracker that doesn't make my wallet look like a brick. The thinness is actually mind-blowing."</p>
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-full bg-[#B8B5B2]"></div>
+<div>
+<p class="font-bold text-[#28221E]">Marcus T.</p>
+<p class="text-xs text-[#6D6762]">Verified Buyer</p>
+</div>
+</div>
+</div>
+<div class="min-w-[300px] md:min-w-[400px] bg-white/40 p-8 rounded-3xl border border-black/5 snap-center">
+<div class="flex text-[#8D7B68] mb-4">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-[#4A443F] text-lg italic mb-6">"Setup took 30 seconds. I've already used the tracking features twice this week. Life saver."</p>
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-full bg-[#B8B5B2]"></div>
+<div>
+<p class="font-bold text-[#28221E]">Sarah Jenkins</p>
+<p class="text-xs text-[#6D6762]">Verified Buyer</p>
+</div>
+</div>
+</div>
+<div class="min-w-[300px] md:min-w-[400px] bg-white/40 p-8 rounded-3xl border border-black/5 snap-center">
+<div class="flex text-[#8D7B68] mb-4">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-[#4A443F] text-lg italic mb-6">"The build quality is exceptional. It feels like a premium tool, not a plastic toy like others."</p>
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-full bg-[#B8B5B2]"></div>
+<div>
+<p class="font-bold text-[#28221E]">David L.</p>
+<p class="text-xs text-[#6D6762]">Verified Buyer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-4 bg-white/20">
+  <div class="max-w-screen-xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12 px-2 text-center text-[#28221E]">Questions?</h2>
+    <div class="space-y-4 max-w-3xl mx-auto">
+      <div class="group bg-white/40 rounded-2xl border border-[#28221E]/10 p-6 transition-all hover:border-[#28221E]/50">
+        <button class="w-full flex justify-between items-center text-left font-bold text-base text-[#28221E]">
+          How long does the battery last?
+          <span class="material-symbols-outlined text-[#28221E] group-hover:rotate-180 transition-transform text-2xl">expand_more</span>
+        </button>
+        <div class="mt-4 text-[#28221E]/70 text-base hidden group-focus-within:block leading-relaxed">
+          The WAVEKEY battery is designed to last up to 3 years. It is non-replaceable to maintain the ultra-thin 1.2mm profile.
+        </div>
+      </div>
+      <div class="group bg-white/40 rounded-2xl border border-[#28221E]/10 p-6 transition-all hover:border-[#28221E]/50">
+        <button class="w-full flex justify-between items-center text-left font-bold text-base text-[#28221E]">
+          Is there a monthly subscription?
+          <span class="material-symbols-outlined text-[#28221E] group-hover:rotate-180 transition-transform text-2xl">expand_more</span>
+        </button>
+        <div class="mt-4 text-[#28221E]/70 text-base hidden group-focus-within:block leading-relaxed">
+          No. WAVEKEY works with the global network without any recurring fees.
+        </div>
+      </div>
+      <div class="group bg-white/40 rounded-2xl border border-[#28221E]/10 p-6 transition-all hover:border-[#28221E]/50">
+        <button class="w-full flex justify-between items-center text-left font-bold text-base text-[#28221E]">
+          Is it waterproof?
+          <span class="material-symbols-outlined text-[#28221E] group-hover:rotate-180 transition-transform text-2xl">expand_more</span>
+        </button>
+        <div class="mt-4 text-[#28221E]/70 text-base hidden group-focus-within:block leading-relaxed">
+          Yes, it is IP68 rated, meaning it can withstand immersion in water up to 1.5 meters for 30 minutes.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer style="background-color: #28221E;" class="text-white pt-20 pb-10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="col-span-1 md:col-span-1">
+          <h4 class="text-xl font-bold mb-6">De.ESSENTIELS</h4>
+          <p class="text-white/50 text-sm leading-relaxed">
+            Elevating everyday objects through minimalist design and smart technology.
+          </p>
+        </div>
+        <div>
+          <h5 class="font-bold mb-4 text-sm uppercase tracking-wider text-white/40">Shop</h5>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li><a href="#" class="hover:text-white transition-colors">WAVEKEY</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Accessories</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Gift Cards</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-4 text-sm uppercase tracking-wider text-white/40">Support</h5>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Warranty</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Returns</a></li>
+          </ul>
+        </div>
+        <div>
+           <h5 class="font-bold mb-4 text-sm uppercase tracking-wider text-white/40">Stay Connected</h5>
+           <div class="flex gap-2">
+             <input type="email" placeholder="Email Address" class="bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-white/50 text-white placeholder:text-white/30">
+             <button style="color: #28221E;" class="bg-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-cloud transition-colors">OK</button>
+           </div>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-white/40">
+        <p>&copy; 2024 De.ESSENTIELS Inc. All rights reserved.</p>
+        <div class="flex gap-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+        </div>
+      </div>
+    </footer>
+<div class="fixed bottom-0 left-0 w-full p-4 md:hidden z-40 bg-gradient-to-t from-page-bg via-page-bg/80 to-transparent">
+<button class="w-full bg-nav-bg text-white h-14 rounded-2xl font-bold shadow-2xl flex items-center justify-center gap-2 border border-white/10">
+        Buy Now <span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+<div class="h-20 md:hidden"></div> 
+
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.getElementById('navbar');
+  const announcementBar = document.getElementById('announcement-bar');
+  const announcementHeight = announcementBar ? announcementBar.offsetHeight : 48;
+  let isAnnouncementVisible = true;
+
+  window.addEventListener('scroll', () => {
+    let scrollTop = window.scrollY;
+    
+    if (scrollTop > announcementHeight) {
+      // User scrolled past announcement bar height
+      if (scrollTop > lastScrollTop && isAnnouncementVisible) {
+        // Scrolling DOWN - hide announcement bar and move navbar up
+        isAnnouncementVisible = false;
+        announcementBar.style.opacity = '0';
+        announcementBar.style.transform = 'translateY(-100%)';
+        navbar.style.top = '0px';
+      } else if (scrollTop < lastScrollTop && !isAnnouncementVisible) {
+        // Scrolling UP - show announcement bar and move navbar down
+        isAnnouncementVisible = true;
+        announcementBar.style.opacity = '1';
+        announcementBar.style.transform = 'translateY(0)';
+        navbar.style.top = announcementHeight + 'px';
+      }
+    } else {
+      // Near top - always show announcement bar
+      if (!isAnnouncementVisible) {
+        isAnnouncementVisible = true;
+        announcementBar.style.opacity = '1';
+        announcementBar.style.transform = 'translateY(0)';
+        navbar.style.top = announcementHeight + 'px';
+      }
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+</script>
+
+</body></html>
