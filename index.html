@@ -249,15 +249,10 @@ html {
 </head>
 
 <body class="text-[#28221E] transition-colors duration-300">
-  <!-- Announcement Bar -->
-  <div style="background-color: #CECBC8; color: #28221E;"
-    class="text-[11px] font-medium tracking-widest py-3 uppercase text-center relative z-50 fixed w-full transition-all duration-300"
-    id="announcement-bar">
-    <p style="margin: 0; text-align: center;">Free worldwide shipping on orders over $75</p>
-  </div>
+  
 
   <!-- Navigation -->
-  <header class="fixed w-full z-40 transition-all duration-300" id="navbar" style="background-color: #28221E;">
+<header class="fixed top-0 w-full z-50 transition-all duration-500 bg-[#28221E]" id="navbar">
     <div class="absolute inset-0 glass opacity-0 transition-opacity duration-300" id="nav-bg"></div>
 
     <nav class="max-w-7xl mx-auto px-6 lg:px-12 py-5 relative flex items-center justify-between">
@@ -836,88 +831,50 @@ html {
   <div class="h-20 md:hidden"></div>
 
   <script>
-    const navbar = document.getElementById("navbar");
-    const announcementBar = document.getElementById("announcement-bar");
-    const announcementHeight = announcementBar
-      ? announcementBar.offsetHeight
-      : 48;
+  const navbar = document.getElementById("navbar");
 
-    let lastScrollTop = 0;
-    let isAnnouncementVisible = true;
-    let ticking = false;
+  function handleScroll() {
+    const scrollTop = window.scrollY;
 
-    // Ensure correct navbar position on load
-    window.addEventListener("load", () => {
-      navbar.style.top = announcementHeight + "px";
-    });
-
-    function handleScroll() {
-      const scrollTop = window.scrollY;
-
-      // Announcement hide/show logic
-      if (scrollTop > announcementHeight) {
-        if (scrollTop > lastScrollTop && isAnnouncementVisible) {
-          isAnnouncementVisible = false;
-          announcementBar.style.opacity = "0";
-          announcementBar.style.transform = "translateY(-100%)";
-          navbar.style.top = "0px";
-        } else if (scrollTop < lastScrollTop && !isAnnouncementVisible) {
-          isAnnouncementVisible = true;
-          announcementBar.style.opacity = "1";
-          announcementBar.style.transform = "translateY(0)";
-          navbar.style.top = announcementHeight + "px";
-        }
-      } else {
-        if (!isAnnouncementVisible) {
-          isAnnouncementVisible = true;
-          announcementBar.style.opacity = "1";
-          announcementBar.style.transform = "translateY(0)";
-          navbar.style.top = announcementHeight + "px";
-        }
-      }
-
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-
-      // Scroll reveal animation
-      document.querySelectorAll(".reveal").forEach((section) => {
-        const top = section.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-          section.classList.add("active");
-        }
-      });
+    // Add background blur + shadow after scrolling
+    if (scrollTop > 20) {
+      navbar.classList.add("bg-[#28221E]/95", "backdrop-blur-xl", "shadow-lg");
+    } else {
+      navbar.classList.remove("bg-[#28221E]/95", "backdrop-blur-xl", "shadow-lg");
     }
 
-    // Optimized scroll performance
-    window.addEventListener("scroll", () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
-        });
-        ticking = true;
+    // Scroll reveal animation
+    document.querySelectorAll(".reveal").forEach((section) => {
+      const top = section.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        section.classList.add("active");
       }
     });
+  }
 
-    // FAQ accordion (one open at a time)
-    document.querySelectorAll(".faq-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".faq-content").forEach((item) => {
-          if (item !== btn.nextElementSibling) {
-            item.classList.add("hidden");
-          }
-        });
+  window.addEventListener("scroll", handleScroll);
 
-        document.querySelectorAll(".faq-btn span").forEach((icon) => {
-          if (icon !== btn.querySelector("span")) {
-            icon.classList.remove("rotate-180");
-          }
-        });
-
-        btn.nextElementSibling.classList.toggle("hidden");
-        btn.querySelector("span").classList.toggle("rotate-180");
+  // FAQ accordion
+  document.querySelectorAll(".faq-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".faq-content").forEach((item) => {
+        if (item !== btn.nextElementSibling) {
+          item.classList.add("hidden");
+        }
       });
+
+      document.querySelectorAll(".faq-btn span").forEach((icon) => {
+        if (icon !== btn.querySelector("span")) {
+          icon.classList.remove("rotate-180");
+        }
+      });
+
+      btn.nextElementSibling.classList.toggle("hidden");
+      btn.querySelector("span").classList.toggle("rotate-180");
     });
-  </script>
+  });
+</script>
+
 
 
 </body>
