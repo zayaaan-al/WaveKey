@@ -671,69 +671,104 @@ html {
   
 
 
-  <section class="py-20 bg-black/5 overflow-hidden">
-    <div class="max-w-screen-xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-[#28221E]">Loved by minimalists</h2>
-      </div>
-      <div class="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar">
-        <div class="min-w-[300px] md:min-w-[400px] bg-white/40 p-8 rounded-3xl border border-black/5 snap-center">
-          <div class="flex text-[#8D7B68] mb-4">
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-          </div>
-          <p class="text-[#4A443F] text-lg italic mb-6">"Finally, a tracker that doesn't make my wallet look like a
-            brick. The thinness is actually mind-blowing."</p>
-          <div class="flex items-center gap-4">
-            <div class="size-10 rounded-full bg-[#B8B5B2]"></div>
-            <div>
-              <p class="font-bold text-[#28221E]">Marcus T.</p>
-              <p class="text-xs text-[#6D6762]">Verified Buyer</p>
-            </div>
-          </div>
-        </div>
-        <div class="min-w-[300px] md:min-w-[400px] bg-white/40 p-8 rounded-3xl border border-black/5 snap-center">
-          <div class="flex text-[#8D7B68] mb-4">
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-          </div>
-          <p class="text-[#4A443F] text-lg italic mb-6">"Setup took 30 seconds. I've already used the tracking features
-            twice this week. Life saver."</p>
-          <div class="flex items-center gap-4">
-            <div class="size-10 rounded-full bg-[#B8B5B2]"></div>
-            <div>
-              <p class="font-bold text-[#28221E]">Sarah Jenkins</p>
-              <p class="text-xs text-[#6D6762]">Verified Buyer</p>
-            </div>
-          </div>
-        </div>
-        <div class="min-w-[300px] md:min-w-[400px] bg-white/40 p-8 rounded-3xl border border-black/5 snap-center">
-          <div class="flex text-[#8D7B68] mb-4">
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-            <span class="material-symbols-outlined fill-1">star</span>
-          </div>
-          <p class="text-[#4A443F] text-lg italic mb-6">"The build quality is exceptional. It feels like a premium tool,
-            not a plastic toy like others."</p>
-          <div class="flex items-center gap-4">
-            <div class="size-10 rounded-full bg-[#B8B5B2]"></div>
-            <div>
-              <p class="font-bold text-[#28221E]">David L.</p>
-              <p class="text-xs text-[#6D6762]">Verified Buyer</p>
-            </div>
-          </div>
-        </div>
-      </div>
+<section class="py-24 bg-black/5 overflow-hidden">
+  <div class="max-w-screen-xl mx-auto px-4">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#28221E]">
+        Loved by minimalists
+      </h2>
     </div>
-  </section>
+
+    <!-- Mobile Scroll / Desktop Grid -->
+    <div class="flex md:grid md:grid-cols-3 
+                gap-8 
+                overflow-x-auto md:overflow-visible
+                snap-x md:snap-none
+                snap-mandatory
+                scroll-smooth
+                no-scrollbar
+                pb-8 md:pb-0">
+
+      <!-- Card 1 -->
+      <div class="min-w-[320px] 
+                  md:min-w-0 
+                  snap-center
+                  bg-white/40 backdrop-blur-xl 
+                  p-10 rounded-3xl 
+                  border border-black/5 
+                  shadow-lg 
+                  transition-all duration-500 hover:shadow-2xl">
+
+        <div class="flex text-[#8D7B68] mb-6">
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+        </div>
+
+        <p class="text-[#4A443F] text-lg italic leading-relaxed">
+          “Finally, a tracker that doesn't make my wallet look like a brick.
+          The thinness is actually mind-blowing.”
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="min-w-[320px] 
+                  md:min-w-0 
+                  snap-center
+                  bg-white/40 backdrop-blur-xl 
+                  p-10 rounded-3xl 
+                  border border-black/5 
+                  shadow-lg 
+                  transition-all duration-500 hover:shadow-2xl">
+
+        <div class="flex text-[#8D7B68] mb-6">
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+        </div>
+
+        <p class="text-[#4A443F] text-lg italic leading-relaxed">
+          “Setup took 30 seconds. I've already used the tracking features twice this week.
+          A true everyday essential.”
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="min-w-[320px] 
+                  md:min-w-0 
+                  snap-center
+                  bg-white/40 backdrop-blur-xl 
+                  p-10 rounded-3xl 
+                  border border-black/5 
+                  shadow-lg 
+                  transition-all duration-500 hover:shadow-2xl">
+
+        <div class="flex text-[#8D7B68] mb-6">
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+        </div>
+
+        <p class="text-[#4A443F] text-lg italic leading-relaxed">
+          “The build quality feels exceptional.
+          It’s clearly designed as a premium tool, not just another plastic gadget.”
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
   <section class="py-20 px-4 bg-white/20">
     <div class="max-w-screen-xl mx-auto">
       <h2 class="text-4xl font-bold mb-12 px-2 text-center text-[#28221E]">Questions?</h2>
