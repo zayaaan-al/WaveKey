@@ -53,6 +53,25 @@
             line-height: 1.6;
             letter-spacing: 0;
         }
+        @keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
         
         /* Headings - Space Grotesk with tight spacing and strong weight */
         h1, h2, h3, h4, h5, h6 {
@@ -375,6 +394,196 @@
       </div>
     </div>
   </section>
+  <section class="relative py-40 px-4 overflow-hidden">
+
+    <!-- Layered Background -->
+    <div class="absolute inset-0 bg-gradient-to-b 
+              from-[#F2EFEC] via-[#E7E4E1] to-[#CECBC8] 
+              -z-20">
+    </div>
+
+    <!-- Soft Radial Glow -->
+    <div class="absolute top-1/2 left-1/2 w-[700px] h-[700px]
+              -translate-x-1/2 -translate-y-1/2
+              bg-[#8D7B68]/20 blur-3xl rounded-full -z-10">
+    </div>
+
+    <div class="max-w-6xl mx-auto text-center mb-20">
+
+      <p class="text-xs tracking-[0.35em] uppercase text-primary/50 mb-6">
+        Precision Design
+      </p>
+
+      <h2 class="text-4xl md:text-6xl font-semibold tracking-tight text-[#28221E] leading-tight">
+        Effortless. Weightless.
+      </h2>
+
+      <p class="mt-8 text-lg text-[#4A443F] max-w-2xl mx-auto leading-relaxed">
+        Designed to feel invisible — until you need it.
+        Ultra-thin engineering meets intuitive tracking.
+      </p>
+
+    </div>
+
+    <!-- Floating Image -->
+    <div class="relative mx-auto group
+            w-full
+            md:max-w-[600px]
+            lg:max-w-[600px]">
+
+      <!-- Glow Behind Product -->
+      <div class="absolute inset-0 blur-3xl 
+              bg-[#8D7B68]/30 rounded-full scale-110">
+      </div>
+
+      <img src="./images/8.png" alt="Wavekey floating product" class="relative w-full object-contain
+           drop-shadow-[0_50px_80px_rgba(0,0,0,0.35)]
+           animate-[floatSlow_6s_ease-in-out_infinite]
+           transition-transform duration-700
+           group-hover:scale-105" />
+
+    </div>
+
+
+  </section>
+  <section class="relative py-40 px-4 bg-[#F5F3F1] overflow-hidden reveal">
+
+    <!-- Soft Background Glow -->
+    <div class="absolute inset-0 bg-gradient-to-b 
+              from-[#F5F3F1] via-[#ECE9E6] to-[#F5F3F1] -z-10">
+    </div>
+
+    <div class="max-w-7xl mx-auto text-center mb-20">
+
+      <h2 class="text-4xl md:text-6xl font-semibold tracking-tight text-[#28221E] leading-tight">
+        The world’s <span class="italic font-medium">slimmest</span><br>
+        tracking card
+      </h2>
+
+      <p class="mt-8 text-lg text-[#4A443F] max-w-2xl mx-auto leading-relaxed">
+        At just 2.1 mm, WAVEKEY disappears into your wallet —
+        thinner than two stacked credit cards.
+      </p>
+
+    </div>
+
+    <div class="relative max-w-5xl mx-auto group">
+
+      <!-- Subtle Glow -->
+      <div class="absolute inset-0 blur-3xl 
+              bg-[#8D7B68]/20 rounded-full scale-110">
+      </div>
+
+      <img src="./images/smart-wallet-tracker-card-bluetooth-5-evolved-chargers-images-11_12.jpg.jpeg"
+        alt="2.1mm ultra thin tracking card" class="relative 
+           w-full 
+           md:w-[80%] 
+           lg:w-[60%] 
+           mx-auto
+           object-contain
+           drop-shadow-[0_60px_100px_rgba(0,0,0,0.25)]
+           transition-transform duration-700
+           group-hover:scale-105" />
+
+    </div>
+
+
+  </section>
+  <section class="py-28 px-4 relative overflow-hidden">
+    <!-- Soft Background Glow -->
+    <div class="absolute top-1/2 left-1/2 w-[600px] h-[600px] 
+              -translate-x-1/2 -translate-y-1/2 
+              bg-[#8D7B68]/20 blur-3xl rounded-full pointer-events-none">
+    </div>
+
+    <div class="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-24 items-center relative z-10">
+
+      <!-- IMAGE SIDE -->
+      <div class="order-2 md:order-1">
+        <div class="relative bg-white/40 backdrop-blur-xl rounded-3xl 
+                  p-6 md:p-10 border border-black/5 shadow-2xl 
+                  hover:shadow-[0_20px_60px_rgba(0,0,0,0.15)] 
+                  transition-all duration-500 overflow-hidden group">
+
+          <div class="relative aspect-square w-full rounded-2xl overflow-hidden">
+
+            <!-- Image -->
+            <img src="./images/IMG_5730.PNG" alt="W1 Internal Architecture"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+
+
+          </div>
+
+          <p class="mt-6 text-xs font-semibold text-primary uppercase 
+                  tracking-[0.35em] opacity-60 text-center">
+            W1 INTERNAL ARCHITECTURE
+          </p>
+
+        </div>
+      </div>
+
+      <!-- TEXT SIDE -->
+      <div class="order-1 md:order-2 space-y-10">
+
+        <div>
+          <p class="text-primary font-semibold uppercase 
+                  tracking-[0.35em] text-xs opacity-60 mb-6">
+            The Engineering
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-semibold 
+                   tracking-tight text-[#28221E] leading-tight">
+            Technical Schematic
+          </h2>
+
+          <p class="text-[#4A443F] text-lg leading-relaxed mt-6 max-w-xl">
+            Beneath the ultra-slim 2.1 mm profile lies a marvel of precision micro-engineering.
+            Every component is optimized for security, efficiency, and seamless integration.
+          </p>
+        </div>
+
+        <!-- Features -->
+        <div class="space-y-8">
+
+          <div class="flex gap-6 items-start group">
+            <div class="text-primary font-bold text-2xl opacity-40 group-hover:opacity-100 transition">
+              01
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-[#28221E] mb-1">
+                Reinforced Core
+              </p>
+              <p class="text-sm text-[#6D6762] leading-relaxed">
+                A structural metal frame and tempered glass shield internal components
+                while maintaining a refined, ultra-slim profile.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6 items-start group">
+            <div class="text-primary font-bold text-2xl opacity-40 group-hover:opacity-100 transition">
+              02
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-[#28221E] mb-1">
+                Piezoelectric Speaker
+              </p>
+              <p class="text-sm text-[#6D6762] leading-relaxed">
+                Ultra-thin acoustic chambers deliver up to 80 dB of sound clarity
+                while preserving battery efficiency.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
   <section class="py-20 px-4 max-w-screen-xl mx-auto">
     <div class="bg-white/40 rounded-3xl border border-black/5 overflow-hidden">
       <div class="flex flex-col md:flex-row items-center">
@@ -437,10 +646,16 @@
       </div>
 
       <!-- Image -->
-      <div class="w-full relative">
-        <div class="aspect-[16/9] w-full rounded-3xl overflow-hidden bg-white/20 border border-black/5 shadow-lg">
+      <div class="relative mx-auto
+            w-full
+            md:max-w-[800px]
+            lg:max-w-[950px]">
+
+        <div class="aspect-[16/9] w-full rounded-3xl overflow-hidden 
+              bg-white/20 border border-black/5 shadow-lg">
+
           <img src="./images/wavekey-wallet.png" alt="Slim wallet with WAVEKEY tracker"
-            class="w-full h-full object-cover" />
+            class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
         </div>
 
         <!-- Overlay Card -->
@@ -451,89 +666,15 @@
             Fits in any standard card slot, sleeve, or minimalist wallet.
           </p>
         </div>
+
       </div>
+
 
     </div>
   </section>
 
+  
 
-  <section class="py-24 px-4 max-w-screen-xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-20 items-center">
-
-      <!-- Schematic Card -->
-      <div class="order-2 md:order-1">
-        <div class="relative bg-white/30 rounded-3xl p-12 border border-black/5 shadow-xl">
-
-          <div class="aspect-square flex items-center justify-center relative">
-            <span class="material-symbols-outlined text-[120px] text-primary/10 absolute">
-              developer_board
-            </span>
-
-            <div class="relative z-10 w-full h-full border-2 border-dashed border-primary/20 rounded-xl 
-                      flex flex-col items-center justify-center p-10 bg-white/20">
-
-              <div class="w-full space-y-4">
-                <div class="h-2 bg-primary/20 rounded-full w-3/4"></div>
-                <div class="h-2 bg-primary/20 rounded-full w-1/2"></div>
-                <div class="h-2 bg-primary/20 rounded-full w-5/6"></div>
-
-                <div class="flex gap-4 pt-4 items-center">
-                  <div class="size-12 rounded-full border-2 border-primary/40"></div>
-                  <div class="flex-1 h-12 rounded-lg bg-primary/10"></div>
-                </div>
-              </div>
-
-              <p class="mt-10 text-xs font-semibold text-primary uppercase tracking-[0.3em] opacity-60">
-                W1 Internal Architecture
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Text Content -->
-      <div class="order-1 md:order-2 space-y-8">
-        <p class="text-primary font-semibold uppercase tracking-[0.3em] text-xs opacity-60">
-          The Engineering
-        </p>
-
-        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-[#28221E]">
-          Technical Schematic
-        </h2>
-
-        <p class="text-[#4A443F] text-lg leading-relaxed max-w-xl">
-          Beneath the ultra-slim 2.1 mm profile lies a marvel of micro-engineering.
-          Powered by U1-class technology for secure, private tracking with exceptional power efficiency.
-        </p>
-
-        <div class="space-y-6 pt-2">
-          <!-- Feature 01 -->
-          <div class="flex gap-4 items-start">
-            <span class="text-primary font-bold text-xl">01</span>
-            <div>
-              <p class="font-semibold text-[#28221E]">Reinforced Core</p>
-              <p class="text-sm text-[#6D6762] leading-relaxed">
-                A metal frame and tempered glass protect the battery without compromising elegance.
-              </p>
-            </div>
-          </div>
-
-          <!-- Feature 02 -->
-          <div class="flex gap-4 items-start">
-            <span class="text-primary font-bold text-xl">02</span>
-            <div>
-              <p class="font-semibold text-[#28221E]">Piezoelectric Speaker</p>
-              <p class="text-sm text-[#6D6762] leading-relaxed">
-                Ultra-thin acoustic chambers deliver up to 80 dB of clarity.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <section class="py-20 bg-black/5 overflow-hidden">
     <div class="max-w-screen-xl mx-auto px-4">
@@ -695,53 +836,89 @@
   <div class="h-20 md:hidden"></div>
 
   <script>
+    const navbar = document.getElementById("navbar");
+    const announcementBar = document.getElementById("announcement-bar");
+    const announcementHeight = announcementBar
+      ? announcementBar.offsetHeight
+      : 48;
+
     let lastScrollTop = 0;
-    const navbar = document.getElementById('navbar');
-    const announcementBar = document.getElementById('announcement-bar');
-    const announcementHeight = announcementBar ? announcementBar.offsetHeight : 48;
     let isAnnouncementVisible = true;
+    let ticking = false;
 
-    window.addEventListener('scroll', () => {
-      let scrollTop = window.scrollY;
+    // Ensure correct navbar position on load
+    window.addEventListener("load", () => {
+      navbar.style.top = announcementHeight + "px";
+    });
 
+    function handleScroll() {
+      const scrollTop = window.scrollY;
+
+      // Announcement hide/show logic
       if (scrollTop > announcementHeight) {
-        // User scrolled past announcement bar height
         if (scrollTop > lastScrollTop && isAnnouncementVisible) {
-          // Scrolling DOWN - hide announcement bar and move navbar up
           isAnnouncementVisible = false;
-          announcementBar.style.opacity = '0';
-          announcementBar.style.transform = 'translateY(-100%)';
-          navbar.style.top = '0px';
+          announcementBar.style.opacity = "0";
+          announcementBar.style.transform = "translateY(-100%)";
+          navbar.style.top = "0px";
         } else if (scrollTop < lastScrollTop && !isAnnouncementVisible) {
-          // Scrolling UP - show announcement bar and move navbar down
           isAnnouncementVisible = true;
-          announcementBar.style.opacity = '1';
-          announcementBar.style.transform = 'translateY(0)';
-          navbar.style.top = announcementHeight + 'px';
+          announcementBar.style.opacity = "1";
+          announcementBar.style.transform = "translateY(0)";
+          navbar.style.top = announcementHeight + "px";
         }
       } else {
-        // Near top - always show announcement bar
         if (!isAnnouncementVisible) {
           isAnnouncementVisible = true;
-          announcementBar.style.opacity = '1';
-          announcementBar.style.transform = 'translateY(0)';
-          navbar.style.top = announcementHeight + 'px';
+          announcementBar.style.opacity = "1";
+          announcementBar.style.transform = "translateY(0)";
+          navbar.style.top = announcementHeight + "px";
         }
       }
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
-    document.querySelectorAll(".faq-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const content = btn.nextElementSibling;
-        const icon = btn.querySelector("span");
 
-        // toggle
-        content.classList.toggle("hidden");
-        icon.classList.toggle("rotate-180");
+      // Scroll reveal animation
+      document.querySelectorAll(".reveal").forEach((section) => {
+        const top = section.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          section.classList.add("active");
+        }
+      });
+    }
+
+    // Optimized scroll performance
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // FAQ accordion (one open at a time)
+    document.querySelectorAll(".faq-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".faq-content").forEach((item) => {
+          if (item !== btn.nextElementSibling) {
+            item.classList.add("hidden");
+          }
+        });
+
+        document.querySelectorAll(".faq-btn span").forEach((icon) => {
+          if (icon !== btn.querySelector("span")) {
+            icon.classList.remove("rotate-180");
+          }
+        });
+
+        btn.nextElementSibling.classList.toggle("hidden");
+        btn.querySelector("span").classList.toggle("rotate-180");
       });
     });
   </script>
+
 
 </body>
 
